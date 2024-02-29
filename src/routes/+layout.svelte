@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '$styles/app.css';
 	import { onNavigate } from '$app/navigation';
-	import { DesktopNav, MobileNav, Metadata, Footer } from '$components';
+	import { DesktopNav, MobileNav, Metadata, Footer, BotFather } from '$components';
 	import type { LayoutData } from './$types';
 	export let data: LayoutData;
 
@@ -18,6 +18,7 @@
 </script>
 
 <Metadata />
+<BotFather />
 
 <div class="flex bg-zinc-50 overflow-y-scroll font-sfo">
 	<div class="fixed inset-0 flex bg-stone-900 justify-center sm:px-8 overflow-y-scroll">
