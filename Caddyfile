@@ -1,0 +1,8 @@
+app.localhost {
+	encode zstd gzip
+	reverse_proxy * localhost:5173
+}
+
+api.localhost {
+	reverse_proxy * localhost:8000
+}
