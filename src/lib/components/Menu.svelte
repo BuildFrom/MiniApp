@@ -7,7 +7,7 @@
 
 {#if $page.url.pathname !== '/'}
 	<div class="mt-10 px-20 sm:px-10 max-w-5xl mx-auto">
-		<a class="text-zinc-400" href="/">Меню</a> /
+		<a class="text-zinc-400" href="/">Menu</a> /
 		<!-- <span class="text-yellow-950">
 			{#if source.length > 0 && source[0].category !== undefined}
 				{source[0].category === 'desserts'

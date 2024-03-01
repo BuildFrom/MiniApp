@@ -12,20 +12,10 @@
 		<script>
 			Telegram.WebApp.ready();
 
-			Telegram.WebApp.MenuButtonWebApp.setParams({
-				text: 'Menu'
-			});
+			// Expand Button
 
 			Telegram.WebApp.MainButton.setParams({
 				text: 'Expand'
-			});
-
-			Telegram.WebApp.BackButton.setParams({
-				text: 'Back'
-			});
-
-			Telegram.WebApp.SettingsButton.setParams({
-				text: 'Settings'
 			});
 
 			Telegram.WebApp.MainButton.onClick(function () {
@@ -33,11 +23,30 @@
 			});
 
 			Telegram.WebApp.MainButton.show();
-			Telegram.WebApp.MenuButtonWebApp.show();
-			Telegram.WebApp.BackButton.show();
+
+			// Settings Button
+
+			Telegram.WebApp.SettingsButton.onClick(function () {
+				Telegram.WebApp.openSettings();
+			});
+
 			Telegram.WebApp.SettingsButton.show();
 
+			// Back Button
+
+			// MODIFY: return to the previous page
+
+			Telegram.WebApp.BackButton.onClick(function () {
+				Telegram.WebApp.close();
+			});
+
+			Telegram.WebApp.BackButton.show();
+
+			// Close Confirmation
+
 			Telegram.WebApp.enableClosingConfirmation();
+
+			
 		</script>
 	</head>
 
