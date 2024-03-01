@@ -1,6 +1,9 @@
+import { menu } from '$seeds';
 
 const utils = {
-	// add utility functions here
+	findById(id: string) {
+		return menu.product.find((item) => item.id === id);
+	}
 };
 
 export default utils;

@@ -1,5 +1,8 @@
 <script lang="ts">
+	import { Menu } from '$components';
 	import { enhance } from '$app/forms';
+	import type { PageData } from './$types';
+	export let data: PageData;
 </script>
 
 <form
@@ -10,7 +13,9 @@
 		}}
 	method="POST"
 >
-	<button type="submit" class="btn btn-primary">Submit</button>
+	<Menu source={data.all} />
+
+	<!-- <button type="submit" class="btn btn-primary">Submit</button> -->
 </form>
 
 This is a telegram web app.
