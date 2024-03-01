@@ -20,7 +20,7 @@ export default defineConfig(({  mode }) => {
             sveltekit()],
         server: {
             https: true,
-			host: '127.0.0.1', // DEV
+			host: '0.0.0.0',
         },
         define: {
             'process.env': process.env
