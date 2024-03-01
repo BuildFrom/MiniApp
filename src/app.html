@@ -7,7 +7,38 @@
 		<div id="viewport"></div>
 		<div id="viewport-params-size"></div>
 		<div id="viewport-params-expand"></div>
+		<script src="https://telegram.org/js/telegram-web-app.js"></script>
 		%sveltekit.head%
+		<script>
+			Telegram.WebApp.ready();
+
+			Telegram.WebApp.MenuButtonWebApp.setParams({
+				text: 'Menu'
+			});
+
+			Telegram.WebApp.MainButton.setParams({
+				text: 'Expand'
+			});
+
+			Telegram.WebApp.BackButton.setParams({
+				text: 'Back'
+			});
+
+			Telegram.WebApp.SettingsButton.setParams({
+				text: 'Settings'
+			});
+
+			Telegram.WebApp.MainButton.onClick(function () {
+				Telegram.WebApp.expand();
+			});
+
+			Telegram.WebApp.MainButton.show();
+			Telegram.WebApp.MenuButtonWebApp.show();
+			Telegram.WebApp.BackButton.show();
+			Telegram.WebApp.SettingsButton.show();
+
+			Telegram.WebApp.enableClosingConfirmation();
+		</script>
 	</head>
 
 	<body data-sveltekit-preload-data="hover">

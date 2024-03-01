@@ -1,5 +1,11 @@
 import type { Handle } from '@sveltejs/kit';
 import { sequence } from '@sveltejs/kit/hooks';
+import { telegramBotMiddleware } from '$lib';
+
+const handleCommunication: Handle = async ({ event, resolve }) => {
+	await telegramBotMiddleware();
+	return await resolve(event);
+};
 
 const i18n: Handle = async ({ event, resolve }) => {
 	const locale = 'en';
@@ -16,4 +22,4 @@ const i18n: Handle = async ({ event, resolve }) => {
 	});
 };
 
-export const handle: Handle = sequence(i18n);
+export const handle: Handle = sequence(i18n, handleCommunication);

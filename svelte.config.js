@@ -10,10 +10,12 @@ const config = {
 		alias: {
 			$source: 'src/',
 			$customTypes: 'src/app.d.ts',
+			$telegramTypes: 'src/telegram.d.ts',
 			$styles: 'src/styles',
 			$components: 'src/lib/components',
 			$icons: 'src/lib/icons',
-			$seeds: 'src/lib/seeds'
+			$seeds: 'src/lib/seeds',
+			$setup: 'src/lib/setup'
 		}
 	}
 };

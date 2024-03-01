@@ -1,4 +1,5 @@
 import { dev } from '$app/environment';
+import durgerking from '$icons/durgerking.png';
 
 class Site {
 	name: string;
@@ -34,8 +35,8 @@ class Site {
 
 const createSite = new Site(
 	'Your Brand',
-	new URL(dev ? 'https://127.0.0.1:5173' : 'https://vanillabites.pages.dev/'),
-	'pic.jpg',
+	new URL(dev ? 'https://127.0.0.1:5173' : 'https://miniapptester.pages.dev'),
+	durgerking,
 	'Description ',
 	{
 		phone: 'tel:1231232132',

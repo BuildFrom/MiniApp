@@ -1,2 +1,2 @@
 export { default as utils } from './utils';
-export { default as newTelegramBot } from './bot';
+export { default as telegramBotMiddleware } from './bot';

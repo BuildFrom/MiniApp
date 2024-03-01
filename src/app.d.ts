@@ -1,31 +1,14 @@
-// See https://kit.svelte.dev/docs/types#app
-// for information about these interfaces
-
-import type { Telegram } from '@twa-dev/types';
-import type { WebApp as WebAppTypes } from '@twa-dev/types';
-
 declare global {
 	namespace App {
 		interface Error {
 			code?: string;
 			errorId?: string;
 		}
-		interface Locals {
-			initData: {
-				locale?: string;
-			};
-		}
 	}
 
 	declare interface Document {
 		startViewTransition(callback: () => void): void;
 	}
-
-	declare interface Window {
-		Telegram: Telegram;
-	}
-
-	let WebApp: WebAppTypes | undefined;
 }
 
 type Type = {
@@ -57,4 +40,4 @@ interface Validation {
 	phoneLimit?: string;
 }
 
-export { Data, Type, Telegram, WebApp, Validation, Form, Document };
+export { Data, Type, Validation, Form, Document };
