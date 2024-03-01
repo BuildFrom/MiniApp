@@ -19,7 +19,7 @@
 				{name}
 			</h1>
 			<ul class="group rounded-xl">
-				<img src={`../${icon}`} alt={name} class="max-w-[500px] h-60 object-cover rounded-xl" />
+				<img src={`..${icon}`} alt={name} class="max-w-[500px] h-60 object-cover rounded-xl" />
 				<!-- Label -->
 				{#if kg}
 					<p class="text-2xl pt-5 text-zinc-500">
